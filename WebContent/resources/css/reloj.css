@@ -1,0 +1,76 @@
+@charset "ISO-8859-1";
+
+.wrap{
+	width: 90%;
+	max-width: 1000px;
+	margin-left: 400px;
+	height: 5px;
+	
+}
+
+.widget{
+	width: 40%;
+	margin-left: 400px;	
+	height: 5px;
+}
+
+
+
+.widget p {
+	display: inline-block;
+	line-height: 1em;	
+}
+
+
+.fecha {
+	font-family: Oswald,Arial;
+	text-align: center;
+	font-size: 1.5em;
+	
+	background-color:rgba(0,255,0,0.3);
+	padding: 20px;
+	width: 100%;
+	
+}
+
+.reloj {
+	font-family: Oswald,Arial;
+	width: 100%;
+	padding: 20px;
+	font-size: 3em;
+	text-align: center;
+	background-color:rgba(0,255,0,0.3);
+}
+
+.minutos{
+	font-size: 2rem;
+	display: block;
+	
+}
+
+.horas{
+	font-size: 2rem;
+	display: block;
+	
+}
+
+
+.reloj .caja-segundos {
+	display: inline-block;
+
+}
+
+.reloj .segundos,
+.reloj .ampm {
+	font-size: 2rem;
+	display: block;
+	
+	
+	
+}
+
+
+
+
+
+

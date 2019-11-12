@@ -1,0 +1,146 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- to activate annotations in beans already registered in the application context -->
+    <context:annotation-config />
+    
+	<context:property-placeholder location="classpath:database.properties" file-encoding="UTF-8" />
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">	
+		<property name="driverClassName" value="${mssql.driver}" />
+	    <property name="url" value="${mssql.url}" />
+	    <property name="username" value="${mssql.user}" />
+	    <property name="password" value="${mssql.password}" />
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- DAO  -->
+	<bean id="personaDAO" class="pe.edu.sanna.triage.dao.PersonaDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="ordenAtencionDAO" class="pe.edu.sanna.triage.dao.OrdenAtencionDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="triageDAO" class="pe.edu.sanna.triage.dao.TriageDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="usuarioDAO" class="pe.edu.sanna.triage.dao.UsuarioDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="pacienteDAO" class="pe.edu.sanna.triage.dao.PacienteDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="parametroDAO" class="pe.edu.sanna.triage.dao.ParametroDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="especialidadDAO" class="pe.edu.sanna.triage.dao.EspecialidadDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	
+	<bean id="topicosDAO" class="pe.edu.sanna.triage.dao.TopicosDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="enfemedadDAO" class="pe.edu.sanna.triage.dao.EnfermedadActualDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="funcionesVitaDAO" class="pe.edu.sanna.triage.dao.FuncionesVitalesDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+
+		<bean id="examenesDAO" class="pe.edu.sanna.triage.dao.ExamenesApoyoDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	
+	<bean id="suminisReDAO" class="pe.edu.sanna.triage.dao.SumistrarRecetaDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	
+	<bean id="descansomediDAO" class="pe.edu.sanna.triage.dao.DescansoMedicoDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	
+	<bean id="nivelcumreportDAO" class="pe.edu.sanna.triage.dao.ItemNivCumpReportDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	
+	
+	<bean id="prioridadDAO" class="pe.edu.sanna.triage.dao.PrioridadDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="catalogoDiagnostDAO" class="pe.edu.sanna.triage.dao.CatalogoDiagnosticoDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="notaenfermeriaDAO" class="pe.edu.sanna.triage.dao.NotaEnfermeriaDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+		<bean id="notaenfermeriaEmerDAO" class="pe.edu.sanna.triage.dao.NotaEnfermeriaEmerDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="triageEmerDAO" class="pe.edu.sanna.triage.dao.TriageEmerDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="itemNivelPorcentualReportDAOImpl" class="pe.edu.sanna.triage.dao.ItemNivelPorcentualReportDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="periodoDAO" class="pe.edu.sanna.triage.dao.PeriodoDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="itemReporteGeneralTriajeDAO" class="pe.edu.sanna.triage.dao.ItemReporteGeneralTriajeDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="itemEmergenciaDAO" class="pe.edu.sanna.triage.dao.ItemEmergenciaDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<!-- view resolver for rendering the final output -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<mvc:annotation-driven />
+	
+	<!-- register beans for handling incoming HTTP requests -->
+	<context:component-scan base-package="pe.edu.sanna.triage.service"/>
+	<context:component-scan base-package="pe.edu.sanna.triage.controller" />
+	
+	<!-- MultipartResolver -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="5242880" />
+	</bean>
+	
+	<mvc:default-servlet-handler />
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
+</beans>

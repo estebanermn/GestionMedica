@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Leaf_Green_2" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7eebaa4-068b-407f-bf7a-d4c2e72a1292">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Data Adapters II"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="OrdenAtencion" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[sp_ordenAtencion  $P{OrdenAtencion}]]>
+	</queryString>
+	<field name="Acto Medico" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Acto Medico"/>
+	</field>
+	<field name="Historia Clinica" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Historia Clinica"/>
+	</field>
+	<field name="Apellidos y Nombres" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Apellidos y Nombres"/>
+	</field>
+	<field name="Doc. de Identidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Doc. de Identidad"/>
+	</field>
+	<field name="Sexo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Sexo"/>
+	</field>
+	<field name="Edad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Edad"/>
+	</field>
+	<field name="Seguro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Seguro"/>
+	</field>
+	<field name="Fecha Ingreso Triaje" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Fecha Ingreso Triaje"/>
+	</field>
+	<field name="Hora Ingreso Triaje" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Hora Ingreso Triaje"/>
+	</field>
+	<field name="Prioridad de Atencion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Prioridad de Atencion"/>
+	</field>
+	<field name="Fecha Ingreso Emergencia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Fecha Ingreso Emergencia"/>
+	</field>
+	<field name="Hora Ingreso Emergencia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Hora Ingreso Emergencia"/>
+	</field>
+	<field name="Box" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Box"/>
+	</field>
+	<field name="Medico" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Medico"/>
+	</field>
+	<field name="Motivo Ingreso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Motivo Ingreso"/>
+	</field>
+	<field name="Tiempo enfermedad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Tiempo enfermedad"/>
+	</field>
+	<field name="Presion arterial(mm Hg)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Presion arterial(mm Hg)"/>
+	</field>
+	<field name="Frecuencia cardiaca (latidos x Min)" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Frecuencia cardiaca (latidos x Min)"/>
+	</field>
+	<field name="Saturacion de oxigeno" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Saturacion de oxigeno"/>
+	</field>
+	<field name="Frecuencia respiratoria x Min" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Frecuencia respiratoria x Min"/>
+	</field>
+	<field name="Temperatura corporal (°C)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Temperatura corporal (°C)"/>
+	</field>
+	<field name="Peso (Kg)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Peso (Kg)"/>
+	</field>
+	<field name="Talla (M)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Talla (M)"/>
+	</field>
+	<field name="IMC" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="IMC"/>
+	</field>
+	<field name="DIAGNOSTICO 1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DIAGNOSTICO 1"/>
+	</field>
+	<field name="TIPO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TIPO"/>
+	</field>
+	<field name="DIAGNOSTICO 2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DIAGNOSTICO 2"/>
+	</field>
+	<field name="COLUMN_28" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TIPO"/>
+	</field>
+	<field name="DIAGNOSTICO 3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DIAGNOSTICO 3"/>
+	</field>
+	<field name="COLUMN_30" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TIPO"/>
+	</field>
+	<field name="EXAMEN AUXILIAR 1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EXAMEN AUXILIAR 1"/>
+	</field>
+	<field name="Servicio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Servicio"/>
+	</field>
+	<field name="Especificacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Especificacion"/>
+	</field>
+	<field name="EXAMEN AUXILIAR 2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EXAMEN AUXILIAR 2"/>
+	</field>
+	<field name="COLUMN_35" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Servicio"/>
+	</field>
+	<field name="COLUMN_36" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Especificacion"/>
+	</field>
+	<field name="EXAMEN AUXILIAR 3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EXAMEN AUXILIAR 3"/>
+	</field>
+	<field name="COLUMN_38" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Servicio"/>
+	</field>
+	<field name="COLUMN_39" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Especificacion"/>
+	</field>
+	<field name="EXAMEN AUXILIAR 4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EXAMEN AUXILIAR 4"/>
+	</field>
+	<field name="COLUMN_41" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Servicio"/>
+	</field>
+	<field name="COLUMN_42" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Especificacion"/>
+	</field>
+	<field name="EXAMEN AUXILIAR 5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EXAMEN AUXILIAR 5"/>
+	</field>
+	<field name="COLUMN_44" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Servicio"/>
+	</field>
+	<field name="COLUMN_45" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Especificacion"/>
+	</field>
+	<field name="MEDICAMENTO 1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MEDICAMENTO 1"/>
+	</field>
+	<field name="dosis" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dosis"/>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<field name="especificaciones_generales" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="especificaciones_generales"/>
+	</field>
+	<field name="MEDICAMENTO 2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MEDICAMENTO 2"/>
+	</field>
+	<field name="COLUMN_51" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dosis"/>
+	</field>
+	<field name="COLUMN_52" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<field name="COLUMN_53" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="especificaciones_generales"/>
+	</field>
+	<field name="MEDICAMENTO 3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MEDICAMENTO 3"/>
+	</field>
+	<field name="COLUMN_55" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dosis"/>
+	</field>
+	<field name="COLUMN_56" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<field name="COLUMN_57" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="especificaciones_generales"/>
+	</field>
+	<field name="MEDICAMENTO 4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MEDICAMENTO 4"/>
+	</field>
+	<field name="COLUMN_59" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dosis"/>
+	</field>
+	<field name="COLUMN_60" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<field name="COLUMN_61" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="especificaciones_generales"/>
+	</field>
+	<field name="MEDICAMENTO 5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MEDICAMENTO 5"/>
+	</field>
+	<field name="COLUMN_63" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dosis"/>
+	</field>
+	<field name="COLUMN_64" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<field name="COLUMN_65" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="especificaciones_generales"/>
+	</field>
+	<field name="ALTA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ALTA"/>
+	</field>
+	<title>
+		<band height="126" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="97" y="11" width="100" height="30" uuid="b5cac5aa-e483-4614-a5ed-f18ab2d06587"/>
+				<textFieldExpression><![CDATA[$F{Acto Medico}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="31" width="200" height="30" uuid="5a7e820a-7786-4ea1-8073-7c0e0c60ebc4"/>
+				<textFieldExpression><![CDATA[$F{Apellidos y Nombres}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="46" y="49" width="100" height="30" uuid="a5afd43f-17cd-4d3c-ba42-8ba636c74f48"/>
+				<textFieldExpression><![CDATA[$F{Doc. de Identidad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="201" y="49" width="100" height="30" uuid="45987256-ff12-4897-9fe9-d9939da2e51d"/>
+				<textFieldExpression><![CDATA[$F{Sexo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="48" width="100" height="30" uuid="5b2b989d-5999-493c-ad51-282ff575389f"/>
+				<textFieldExpression><![CDATA[$F{Edad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="458" y="51" width="120" height="30" uuid="66cd99c9-1efa-47bc-8822-1976c6b82ca7"/>
+				<textFieldExpression><![CDATA[$F{Seguro}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="126" y="75" width="128" height="30" uuid="55ffc57c-a5aa-4839-bee7-c8a0956ddb02"/>
+				<textFieldExpression><![CDATA[$F{Fecha Ingreso Triaje}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="384" y="70" width="170" height="30" uuid="cc391912-ae37-4cd0-b5d6-74b0ea302b08"/>
+				<textFieldExpression><![CDATA[$F{Prioridad de Atencion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="384" y="90" width="170" height="30" uuid="4cf2b8ca-7ecd-439a-9ea5-64b681c0f1cd"/>
+				<textFieldExpression><![CDATA[$F{Box}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="126" y="92" width="155" height="30" uuid="ca083a9f-748e-409c-ace2-af51ec892e57"/>
+				<textFieldExpression><![CDATA[$F{Fecha Ingreso Emergencia}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="412" y="29" width="100" height="30" uuid="cd7e84b1-d6ca-4962-8922-6118fb01c114"/>
+				<textFieldExpression><![CDATA[$F{Historia Clinica}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="421" y="11" width="100" height="30" uuid="781600e4-baac-4668-8f25-f56f36f9106d"/>
+				<textFieldExpression><![CDATA[$F{ALTA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="13" width="86" height="28" uuid="ee7ad136-da35-4f2d-b4fc-16e2901d3d08"/>
+				<text><![CDATA[Acto medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="31" width="86" height="28" uuid="a2181a26-cd0e-4550-ab6a-7616b9cfb7d3"/>
+				<text><![CDATA[Nombre Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="51" width="86" height="28" uuid="15f28713-e49d-4b3f-a596-9e40f80147c2"/>
+				<text><![CDATA[DNI
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="11" width="127" height="28" uuid="c061e663-3a89-4239-8e2c-e50ea65e837e"/>
+				<text><![CDATA[Resultado de actención]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="49" width="86" height="28" uuid="7a79ed0c-529d-42a0-8df6-5435c5533872"/>
+				<text><![CDATA[Sexo
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="48" width="86" height="28" uuid="d996a1b2-d2dc-4929-9cd3-a28ead32432f"/>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="49" width="86" height="28" uuid="dccb837d-339b-4f17-aafe-d1c746310b28"/>
+				<text><![CDATA[Seguro
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="73" width="86" height="28" uuid="87a0d854-77b1-4aad-8fa9-8b96f6ea1de0"/>
+				<text><![CDATA[Fecha-hora triaje
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="93" width="129" height="28" uuid="20fb38f2-0bc6-4b1e-a0cb-ee44391f9f2e"/>
+				<text><![CDATA[Fecha-hora emergencia
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="31" width="86" height="28" uuid="afe5e0fa-7b51-4f6f-bea7-670d65deea1f"/>
+				<text><![CDATA[Historia Clinica
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="70" width="86" height="28" uuid="9021950b-7e62-4f8a-a6f0-874a77614411"/>
+				<text><![CDATA[Prioridad atención]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="89" width="86" height="28" uuid="49c03c98-1020-4d2d-9ba0-795fadc828da"/>
+				<text><![CDATA[Box de atención]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="567" y="0" width="1" height="123" uuid="5e046bad-7c6e-4d53-8252-8b39857d663e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-12" y="1" width="1" height="123" uuid="8fae153b-de29-4dc8-a5ba-6b1f0313fd74"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-12" y="0" width="577" height="1" uuid="51f9dc6e-6cc3-476d-8533-520ea59fb847"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-11" y="123" width="578" height="1" uuid="45648bc6-f9cf-4ae6-b0c4-a06c602a6850"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="161" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="127" y="71" width="144" height="30" uuid="3dee8ae8-7a79-4617-92e7-91617da94c5c"/>
+				<textFieldExpression><![CDATA[$F{Saturacion de oxigeno}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="129" y="91" width="144" height="30" uuid="4c02c57c-f0ed-4103-afe4-0193084cb166"/>
+				<textFieldExpression><![CDATA[$F{Temperatura corporal (°C)}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="134" y="17" width="144" height="30" uuid="502dfea0-cd19-4c29-a5cb-c81dc53f5ad2"/>
+				<textFieldExpression><![CDATA[$F{Motivo Ingreso}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="410" y="18" width="130" height="30" uuid="143a08d9-b538-47a4-b18e-89a1c93cc5d7"/>
+				<textFieldExpression><![CDATA[$F{Tiempo enfermedad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="441" y="72" width="128" height="30" uuid="4f1b9122-c5a8-4bc7-a30a-382995f238c2"/>
+				<textFieldExpression><![CDATA[$F{Frecuencia respiratoria x Min}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="443" y="48" width="134" height="30" uuid="878f3672-2189-4ca3-b3c5-9a2f5cbf7700"/>
+				<textFieldExpression><![CDATA[$F{Frecuencia cardiaca (latidos x Min)}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="434" y="114" width="100" height="30" uuid="fffba51d-5a34-4bed-8866-5a1ae648bcd1"/>
+				<textFieldExpression><![CDATA[$F{IMC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="319" y="115" width="100" height="30" uuid="03dbc0e2-d3ca-48ec-8489-60e2d28cf66c"/>
+				<textFieldExpression><![CDATA[$F{Talla (M)}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="190" y="115" width="100" height="30" uuid="7785042c-6b50-4b5b-ac26-bc94ad4abd8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af921295-d5be-4add-92b2-2a218988d542"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Peso (Kg)}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="127" y="52" width="144" height="30" uuid="4c91eecb-10a8-4cee-a858-1aa61b951590"/>
+				<textFieldExpression><![CDATA[$F{Presion arterial(mm Hg)}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="18" width="129" height="28" uuid="5e01d668-ab5e-46f1-8ed8-e7fe43b0ab1b"/>
+				<text><![CDATA[Motivo de Ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="37" width="129" height="28" uuid="f4cd985f-425b-4bdc-bc14-26ffba704c07"/>
+				<text><![CDATA[Signos vitales:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="73" width="129" height="28" uuid="7f972478-45ab-453e-b0e5-3b7297886a32"/>
+				<text><![CDATA[Saturación de oxígeno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="92" width="129" height="28" uuid="c418fd03-a314-4e91-b5e1-eacb3e7de67d"/>
+				<text><![CDATA[Temperatura corporal (*C)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="55" width="129" height="28" uuid="197e91b6-67b8-4342-a00c-fe7e42a755a2"/>
+				<text><![CDATA[Presión arterial (mmHg)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="18" width="140" height="28" uuid="90f2dde9-0acb-4bcd-bd40-c3897436af47"/>
+				<text><![CDATA[Tiempo de enfermedad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="51" width="162" height="28" uuid="ce3f8b0c-d896-4881-8127-90170f3cdd30"/>
+				<text><![CDATA[Frecuencia cardiaca (latidos x Min)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="72" width="163" height="28" uuid="eb9f0cf8-bbca-4ab3-be07-95a61f7bdc0a"/>
+				<text><![CDATA[Frecuencia respiratoría x Min]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="116" width="129" height="28" uuid="9061718f-f1a0-4dc2-b79e-27ab2934362f"/>
+				<text><![CDATA[Antopometría: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="115" width="129" height="28" uuid="2de918c3-3fcd-4ce4-98d0-73544d90cf84"/>
+				<text><![CDATA[Peso (Kg)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="115" width="129" height="28" uuid="b1720770-3ec6-43b4-ba92-4bc849eee8b7"/>
+				<text><![CDATA[Talla (M)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="114" width="129" height="28" uuid="6d3c8658-1bd3-4968-ba6d-42d0f463100b"/>
+				<text><![CDATA[IMC]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-11" y="10" width="580" height="1" uuid="47eec449-8d62-43cb-888a-b7edb5c764c2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-11" y="12" width="1" height="141" uuid="7c991a4c-b96c-4473-93f6-5c052b7a3ca8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-10" y="152" width="580" height="1" uuid="4df386b8-7a15-4bad-9c81-d115444c7df9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="569" y="12" width="1" height="141" uuid="4617f147-8c35-4559-88ae-8837967a2804"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="209" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="254" y="40" width="101" height="30" uuid="388ef45d-6d2b-4a8a-a86a-e855ab5e411f"/>
+				<textFieldExpression><![CDATA[$F{EXAMEN AUXILIAR 1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="359" y="40" width="85" height="30" uuid="432fdde1-c666-4b4c-af39-29fdc39c8731"/>
+				<textFieldExpression><![CDATA[$F{Servicio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="41" width="110" height="30" uuid="9e1341ca-f9d3-4876-8179-2e9c6afcc8f4"/>
+				<textFieldExpression><![CDATA[$F{Especificacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="253" y="70" width="101" height="30" uuid="6fe4c918-1a31-46a2-b613-ec51d2e4d7a5"/>
+				<textFieldExpression><![CDATA[$F{EXAMEN AUXILIAR 2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="359" y="70" width="85" height="30" uuid="5cb624e1-c43b-4272-9769-d627af3f07de"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_35}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="70" width="110" height="30" uuid="bef41199-a4f7-4ee6-a57b-1f3e865acc6f"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_36}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="257" y="100" width="101" height="30" uuid="0d0fbd12-9c43-4f72-9fa6-af73c6d5881b"/>
+				<textFieldExpression><![CDATA[$F{EXAMEN AUXILIAR 3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="359" y="100" width="85" height="30" uuid="51b214f1-220c-44a0-aaff-b11c1da2b138"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_38}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="100" width="110" height="30" uuid="8432b4d2-bdc1-4c89-9153-6b05c9351ef5"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_39}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="254" y="130" width="101" height="30" uuid="e13cd36b-1a6d-40a9-a56e-d3d4636826e9"/>
+				<textFieldExpression><![CDATA[$F{EXAMEN AUXILIAR 4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="359" y="130" width="85" height="30" uuid="a7decaff-265a-448e-ad72-84866169f5e7"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_41}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="130" width="110" height="30" uuid="2fcf70fd-29e0-4926-8a9e-7eabd72d505a"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_42}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="254" y="160" width="101" height="30" uuid="1f9a68f8-6698-44bd-8e8c-fbc892a478f4"/>
+				<textFieldExpression><![CDATA[$F{EXAMEN AUXILIAR 5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="359" y="160" width="85" height="30" uuid="6c78642c-8b50-4f48-9b34-c963b54cfa7d"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_44}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="160" width="110" height="30" uuid="b338b5a1-fbf9-428d-a184-98fc5940ce98"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_45}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="47" width="95" height="30" uuid="62792fb9-583e-4ded-a1fc-f5928bcec603"/>
+				<textFieldExpression><![CDATA[$F{DIAGNOSTICO 1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="114" y="47" width="92" height="30" uuid="79b99b3d-da76-448d-9d94-d39bda02ee38"/>
+				<textFieldExpression><![CDATA[$F{TIPO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="84" width="92" height="30" uuid="584754a8-d602-4151-9420-a0a499cdf83a"/>
+				<textFieldExpression><![CDATA[$F{DIAGNOSTICO 2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="111" y="84" width="92" height="30" uuid="303ae2a2-8783-4991-aeb1-1ef6b5fc5063"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_28}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="124" width="92" height="30" uuid="5330ec31-a9d1-44da-bb05-fd83d9a78025"/>
+				<textFieldExpression><![CDATA[$F{DIAGNOSTICO 3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="111" y="124" width="92" height="30" uuid="bbe169d7-a0a2-44ca-bd76-baf0ea04a19c"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_30}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="3" y="20" width="1" height="151" uuid="f39aa632-9e8e-41fb-8b02-b5840112da0a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="214" y="19" width="1" height="151" uuid="928cbb93-4b4a-4a55-afc7-76d48b5545fb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="3" y="171" width="211" height="1" uuid="69202236-ff2c-491e-8196-e717cd28f40e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="3" y="39" width="211" height="1" uuid="2863eec4-13b5-47b0-81fb-292361f355f5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="23" width="100" height="15" uuid="6a2ed44f-6a4b-48b8-b679-8a0c875edc70"/>
+				<text><![CDATA[Diagnóstico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="23" width="100" height="15" uuid="fdcce52d-b12e-4097-8984-d53dc78a5267"/>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="2" width="100" height="15" uuid="c926539a-07a9-4e73-ba10-7d01ed6dfb5a"/>
+				<text><![CDATA[Diagnóstico]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="19" width="211" height="1" uuid="ffd4aa5a-ad6f-4bda-a9db-f54757af9f78"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-8" y="7" width="12" height="1" uuid="49933339-0092-4434-bf05-69b9f77588a5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="73" y="8" width="152" height="1" uuid="fbd7ad89-9ccb-4d21-9dc8-c007b20cac31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="227" y="8" width="1" height="189" uuid="07dd81db-6872-4d88-bc66-ef0996310e99"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-8" y="198" width="233" height="1" uuid="d782aa6f-abc7-4dd1-82a8-7f74320d4a64"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-8" y="7" width="1" height="192" uuid="d03fe206-ad9d-47c0-84b7-2564cad2c0d5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="8" width="1" height="190" uuid="39b1543d-4ebf-450c-9d21-0415f16c9a21"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="569" y="8" width="1" height="191" uuid="24f25194-53a9-402d-8091-057d4910b15b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="8" width="12" height="1" uuid="5cf00665-c055-42eb-a655-bba6e719104e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="323" y="7" width="246" height="1" uuid="a0940f14-1d6a-493c-b7a7-f0fc56f1ec3a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="261" y="3" width="100" height="15" uuid="928cfa4a-918b-42a7-b142-ab1a414b053e"/>
+				<text><![CDATA[Examenes]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="239" y="198" width="331" height="1" uuid="8d849d27-5e94-44ec-9fae-68406e828519"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="246" y="18" width="1" height="171" uuid="d0b561c7-6262-42a6-a9ca-3f18a39dedea"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="246" y="190" width="315" height="1" uuid="d60b55b7-dfe9-4ba1-8154-fbb2d7c2e498"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="253" y="21" width="100" height="15" uuid="17178883-1a0f-4583-9480-3b491ecf170a"/>
+				<text><![CDATA[Exámen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="20" width="100" height="15" uuid="615d6590-5717-4098-9460-a1b2f368f968"/>
+				<text><![CDATA[Especificación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="20" width="100" height="15" uuid="5c355201-6db0-49c9-9a34-b4a7b098d045"/>
+				<text><![CDATA[Servicio]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="247" y="18" width="313" height="1" uuid="2478b456-8f1c-415b-8ee0-dd51f4f7c72b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="560" y="18" width="1" height="171" uuid="fdd1c480-911a-415c-8329-4a40b5808eae"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="248" y="36" width="313" height="1" uuid="d09a7574-09f1-41ce-b4f4-65ff4cb4b76c"/>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="306" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="27" y="25" width="132" height="30" uuid="a6af9242-1356-4d4e-8b94-1870675f7b0a"/>
+				<textFieldExpression><![CDATA[$F{MEDICAMENTO 1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="165" y="23" width="87" height="30" uuid="9528b777-fee5-46b7-a2dd-5db22d5607d8"/>
+				<textFieldExpression><![CDATA[$F{dosis}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="263" y="23" width="44" height="30" uuid="54140c5e-4538-46b8-84a9-7ec2f3543baf"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="327" y="21" width="86" height="30" uuid="ab45302b-c161-47e8-9cd6-64dd821b28e4"/>
+				<textFieldExpression><![CDATA[$F{especificaciones_generales}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="26" y="65" width="133" height="30" uuid="527770ea-3fe5-4a10-8e1a-ec833aa3bcaf"/>
+				<textFieldExpression><![CDATA[$F{MEDICAMENTO 2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="162" y="66" width="87" height="30" uuid="c5ff7259-245f-417a-b29a-160f301b65fa"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_51}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="63" width="44" height="30" uuid="f84bc84f-0672-4d6f-a220-092e50260f46"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_52}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="328" y="61" width="86" height="30" uuid="285794b1-2306-484e-9fe8-b9d732704ce0"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_53}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="26" y="100" width="133" height="30" uuid="491e2930-e289-48ac-9f09-b4cb27242577"/>
+				<textFieldExpression><![CDATA[$F{MEDICAMENTO 3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="162" y="101" width="87" height="30" uuid="02ce2d03-e167-4922-a659-c1804c6687e8"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_55}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="97" width="44" height="30" uuid="4625407e-4e59-4b2c-8234-f06dfcdae197"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_56}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="328" y="97" width="86" height="30" uuid="62d6c50f-68fc-4323-8413-4405f76e1d70"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_57}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="26" y="135" width="133" height="30" uuid="a421984e-8ce6-4ce1-b5e8-b032e2558e72"/>
+				<textFieldExpression><![CDATA[$F{MEDICAMENTO 4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="162" y="136" width="87" height="30" uuid="298794a5-d3dc-4103-9f4f-3a47668e20a1"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_59}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="132" width="44" height="30" uuid="37bcb32c-4966-40de-817b-c27953865c2c"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_60}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="328" y="131" width="86" height="30" uuid="f453afbd-0e22-4a2a-acb4-6b13b24f261b"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_61}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="26" y="167" width="133" height="30" uuid="ee1614ee-b8e6-4fc3-9806-aa295b200111"/>
+				<textFieldExpression><![CDATA[$F{MEDICAMENTO 5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="162" y="168" width="87" height="30" uuid="addaf93e-0f8c-42b4-b6e3-406b0bf2c22e"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_63}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="165" width="44" height="30" uuid="ac6a74b6-d420-4637-a9ba-68290a5fa4b3"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_64}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="327" y="164" width="86" height="30" uuid="f28b6ab4-fb5c-465f-8128-31f5183980cd"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_65}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="73" y="-3" width="492" height="1" uuid="e43b4304-e554-46b4-8792-fc93a5d756ec"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-6" y="217" width="571" height="1" uuid="21d54651-5438-46fd-911f-f0a1950b48ab"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="8" y="205" width="421" height="1" uuid="742c8608-cfd2-4134-9142-50125cf7edcc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="7" y="9" width="421" height="1" uuid="357bbc63-686d-4e45-9f6d-c477f576f7d3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="-5" y="-3" width="17" height="1" uuid="e2b312c0-35bb-4c88-994e-643c594e542c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="18" y="-9" width="100" height="30" uuid="4f50e26c-e169-4b25-94e5-2f1680e266f2"/>
+				<text><![CDATA[Receta]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-7" y="-3" width="1" height="218" uuid="37de816b-f7d3-4ea5-a973-167ceed29357"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="7" y="9" width="1" height="197" uuid="cb3a7c33-5b01-4e6e-aa3f-4caa072d42cd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="428" y="10" width="1" height="197" uuid="42392a6d-43a5-4142-aa65-c2512d89c7fe"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="566" y="-3" width="1" height="221" uuid="57f33f4d-a574-45bb-8f6e-f840bc59abb8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="372" y="259" width="178" height="1" uuid="5cb95129-3454-40c8-9761-ef5cc8d01601"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="370" y="267" width="100" height="18" uuid="2a18ab66-10f6-49d8-98bf-fa741edb4c91"/>
+				<text><![CDATA[Médico: ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="406" y="268" width="156" height="37" uuid="ba88aad7-e579-45f4-8dce-bc99207e4285"/>
+				<textFieldExpression><![CDATA[$F{Medico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

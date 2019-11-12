@@ -1,0 +1,15 @@
+ 
+        .javatmp-btn {
+            height: 6.5rem;
+            white-space: normal;
+            width: 12rem;
+        }
+        .javatmp-btn:hover {
+            cursor: pointer;
+        }
+        .javatmp-btn > i {
+            display: block;
+            font-size: 1.25rem;
+        }
+  
+
